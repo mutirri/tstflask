@@ -1,0 +1,26 @@
+package:
+    name: tstflask
+    version: 0.1.0
+
+build:
+    number: 0
+
+source:
+    git_url: git://github.com/mutirri/tstflask
+    git_tag: 0.1.0
+
+requirements:
+    build:
+        - python
+        - flask
+    run:
+        - python
+        - flask
+
+test:
+    imports:
+        - tstflask
+
+about:
+    home: https://github.com/mutirri/tstflask
+    license: MIT

@@ -1,0 +1,4 @@
+flask-testing
+selenium
+selenium-server-standalone
+selenium-chromedriver
