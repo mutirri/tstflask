@@ -1,0 +1,24 @@
+package: tstflask
+
+platform:
+  - linux-64
+
+engine:
+  - python=2.7
+
+install:
+  - conda info
+  - conda config --add channels mutirri
+  - conda install -q --file conda.recipe/requirements.txt
+  - conda install -q --file conda.recipe/requirements-test.txt
+  - conda info
+
+test:
+  - python setup.py install > install.output
+  - conda info
+  - python tstflask/tests/runtests.py
+
+script:
+  - conda build conda.recipe
+
+build_targets: [conda]
